@@ -27,6 +27,14 @@
 		037D007525F7884300E88D4C /* Note+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007325F7884300E88D4C /* Note+helper.swift */; };
 		037D007725F789B300E88D4C /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007625F789B300E88D4C /* NSPredicate+helper.swift */; };
 		037D007825F78A2200E88D4C /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007625F789B300E88D4C /* NSPredicate+helper.swift */; };
+		037D007925F7ECF500E88D4C /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007025F7822300E88D4C /* Persistance.swift */; };
+		037D007B25F7FE4400E88D4C /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007A25F7FE4400E88D4C /* NoteTests.swift */; };
+		037D007D25F802A300E88D4C /* UnitTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007C25F802A200E88D4C /* UnitTestHelpers.swift */; };
+		037D007E25F802A300E88D4C /* UnitTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D007C25F802A200E88D4C /* UnitTestHelpers.swift */; };
+		037D008125F82DFE00E88D4C /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008025F82DFE00E88D4C /* NoteListView.swift */; };
+		037D008225F82DFE00E88D4C /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008025F82DFE00E88D4C /* NoteListView.swift */; };
+		037D008425F82F0B00E88D4C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008325F82F0B00E88D4C /* NoteView.swift */; };
+		037D008525F82F0B00E88D4C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008325F82F0B00E88D4C /* NoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,10 @@
 		037D007025F7822300E88D4C /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		037D007325F7884300E88D4C /* Note+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+helper.swift"; sourceTree = "<group>"; };
 		037D007625F789B300E88D4C /* NSPredicate+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+helper.swift"; sourceTree = "<group>"; };
+		037D007A25F7FE4400E88D4C /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
+		037D007C25F802A200E88D4C /* UnitTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestHelpers.swift; sourceTree = "<group>"; };
+		037D008025F82DFE00E88D4C /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		037D008325F82F0B00E88D4C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 		037D002225F77EF400E88D4C /* AdvancedNotes */ = {
 			isa = PBXGroup;
 			children = (
+				037D007F25F82DDB00E88D4C /* Notes */,
 				037D002325F77EF400E88D4C /* AppDelegate.swift */,
 				037D002525F77EF400E88D4C /* ContentView.swift */,
 				037D002A25F77EF500E88D4C /* Assets.xcassets */,
@@ -161,6 +174,7 @@
 			children = (
 				037D003C25F77EF600E88D4C /* AdvancedNotesTests.swift */,
 				037D003E25F77EF600E88D4C /* Info.plist */,
+				037D007A25F7FE4400E88D4C /* NoteTests.swift */,
 			);
 			path = AdvancedNotesTests;
 			sourceTree = "<group>";
@@ -192,7 +206,6 @@
 				037D006225F77FFE00E88D4C /* Assets.xcassets */,
 				037D006725F77FFE00E88D4C /* Info.plist */,
 				037D006425F77FFE00E88D4C /* Preview Content */,
-				037D007025F7822300E88D4C /* Persistance.swift */,
 			);
 			path = AdvancedNotesPad;
 			sourceTree = "<group>";
@@ -208,9 +221,11 @@
 		037D006E25F7808000E88D4C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				037D007025F7822300E88D4C /* Persistance.swift */,
 				037D007225F7881400E88D4C /* model */,
 				037D002725F77EF400E88D4C /* AdvancedNotes.xcdatamodeld */,
 				037D007625F789B300E88D4C /* NSPredicate+helper.swift */,
+				037D007C25F802A200E88D4C /* UnitTestHelpers.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -221,6 +236,15 @@
 				037D007325F7884300E88D4C /* Note+helper.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		037D007F25F82DDB00E88D4C /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				037D008025F82DFE00E88D4C /* NoteListView.swift */,
+				037D008325F82F0B00E88D4C /* NoteView.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,9 +409,13 @@
 			files = (
 				037D007725F789B300E88D4C /* NSPredicate+helper.swift in Sources */,
 				037D002925F77EF400E88D4C /* AdvancedNotes.xcdatamodeld in Sources */,
+				037D008125F82DFE00E88D4C /* NoteListView.swift in Sources */,
+				037D007D25F802A300E88D4C /* UnitTestHelpers.swift in Sources */,
 				037D007425F7884300E88D4C /* Note+helper.swift in Sources */,
 				037D002625F77EF400E88D4C /* ContentView.swift in Sources */,
 				037D002425F77EF400E88D4C /* AppDelegate.swift in Sources */,
+				037D007925F7ECF500E88D4C /* Persistance.swift in Sources */,
+				037D008425F82F0B00E88D4C /* NoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				037D003D25F77EF600E88D4C /* AdvancedNotesTests.swift in Sources */,
+				037D007B25F7FE4400E88D4C /* NoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +442,13 @@
 			files = (
 				037D007825F78A2200E88D4C /* NSPredicate+helper.swift in Sources */,
 				037D007525F7884300E88D4C /* Note+helper.swift in Sources */,
+				037D008225F82DFE00E88D4C /* NoteListView.swift in Sources */,
+				037D007E25F802A300E88D4C /* UnitTestHelpers.swift in Sources */,
 				037D006F25F7811200E88D4C /* AdvancedNotes.xcdatamodeld in Sources */,
 				037D007125F7822300E88D4C /* Persistance.swift in Sources */,
 				037D006125F77FFE00E88D4C /* ContentView.swift in Sources */,
 				037D005F25F77FFE00E88D4C /* AdvancedNotesPadApp.swift in Sources */,
+				037D008525F82F0B00E88D4C /* NoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +611,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.paulfran.AdvancedNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -603,7 +635,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.paulfran.AdvancedNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

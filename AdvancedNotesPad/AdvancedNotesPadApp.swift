@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct AdvancedNotesPadApp: App {
     
-    let persistenceController = persistenceController.shared
+    let persistenceController = PersistenceController.shared
     
     var body: some Scene {
         WindowGroup {

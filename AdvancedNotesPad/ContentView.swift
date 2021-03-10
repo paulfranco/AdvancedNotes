@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach(notes) { note in
-                Text("title \(note.title ?? "") date \(note.creationDate ?? Date, formatter: itemFormatter)")
+                Text("title \(note.title ?? "") date \(note.creationDate ?? Date(), formatter: itemFormatter)")
             }
             //.onDelete(perform: deleteItems)
         }
@@ -44,6 +44,6 @@ private let itemFormatter: DateFormatter = {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext,
-                                  PersistanceController.preview.container.viewContext)
+                                  PersistenceController.preview.container.viewContext)
     }
 }

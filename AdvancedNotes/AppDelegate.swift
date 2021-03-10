@@ -17,8 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, persistentContainer.viewContext)
+        let contentView = ContentView().environment(\.managedObjectContext, persistenceController.container.viewContext)
 
+        //UnitTestHelpers.deletesAllNotes(container: persistenceController.container)
+        
         // Create the window and set the content view.
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
@@ -37,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Core Data stack
 
     // This is the entry point to our database (gives us access to our database)
+    /*
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
         
         let container = NSPersistentCloudKitContainer(name: "AdvancedNotes")
@@ -50,12 +53,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         return container
     }()
+ */
+    let persistenceController = PersistenceController.shared
 
     // MARK: - Core Data Saving and Undo support
 
     @IBAction func saveAction(_ sender: AnyObject?) {
         // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
-        let context = persistentContainer.viewContext
+        let context = persistenceController.container.viewContext
 
         if !context.commitEditing() {
             NSLog("\(NSStringFromClass(type(of: self))) unable to commit editing before saving")
@@ -73,12 +78,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func windowWillReturnUndoManager(window: NSWindow) -> UndoManager? {
         // Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.
-        return persistentContainer.viewContext.undoManager
+        return persistenceController.container.viewContext.undoManager
     }
 
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         // Save changes in the application's managed object context before the application terminates.
-        let context = persistentContainer.viewContext
+        let context = persistenceController.container.viewContext
         
         if !context.commitEditing() {
             NSLog("\(NSStringFromClass(type(of: self))) unable to commit editing to terminate")
