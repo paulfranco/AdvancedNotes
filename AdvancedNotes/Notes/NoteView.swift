@@ -12,11 +12,17 @@ struct NoteView: View {
     @ObservedObject var note: Note
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
             TextField("notes title", text: $note.title)
+                //.font(.title)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             
             TextEditor(text: $note.bodyText)
-        }
+            
+            Text("Keywords:")
+            
+            Text("Linked Notes: ")
+        }.padding()
         
     }
 }

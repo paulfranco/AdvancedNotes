@@ -30,16 +30,23 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
+        
+        
+        //UnitTestHelpers.deletesAllNotes(container: result.container)
+        
+        for _ in 0..<5 {
             let newItem = Note(title: "a new note", context: viewContext)
+            newItem.bodyText = Note.defaultText
             
         }
+        /*
         do {
             try viewContext.save()
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+         */
         return result
     }()
     

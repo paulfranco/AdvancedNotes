@@ -56,6 +56,8 @@ extension Note {
         }
     }
     
+    //MARK: - preview helper properties
+    static let defaultText = "dksjdkjskdjskjdklsjd jdks dlkjdkl jdkl skjdcvcvc cx  cxcxcx cx cxc c cx c cx cx cxcxcxc cxcxc cx cxcxcxc skldkl djkldj ljdlksd jds dkjds jds dskldjskl"
 }
 
 //MARK: - property names as strings

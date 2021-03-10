@@ -35,6 +35,7 @@
 		037D008225F82DFE00E88D4C /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008025F82DFE00E88D4C /* NoteListView.swift */; };
 		037D008425F82F0B00E88D4C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008325F82F0B00E88D4C /* NoteView.swift */; };
 		037D008525F82F0B00E88D4C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D008325F82F0B00E88D4C /* NoteView.swift */; };
+		03A9A0D425F8FF9A0067610F /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0D325F8FF9A0067610F /* NoteRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		037D007C25F802A200E88D4C /* UnitTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestHelpers.swift; sourceTree = "<group>"; };
 		037D008025F82DFE00E88D4C /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		037D008325F82F0B00E88D4C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		03A9A0D325F8FF9A0067610F /* NoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				037D008025F82DFE00E88D4C /* NoteListView.swift */,
 				037D008325F82F0B00E88D4C /* NoteView.swift */,
+				03A9A0D325F8FF9A0067610F /* NoteRow.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A9A0D425F8FF9A0067610F /* NoteRow.swift in Sources */,
 				037D007725F789B300E88D4C /* NSPredicate+helper.swift in Sources */,
 				037D002925F77EF400E88D4C /* AdvancedNotes.xcdatamodeld in Sources */,
 				037D008125F82DFE00E88D4C /* NoteListView.swift in Sources */,

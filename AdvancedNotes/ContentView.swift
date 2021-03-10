@@ -14,14 +14,15 @@ struct ContentView: View {
     var body: some View {
         HSplitView {
             NoteListView(selectedNote: $selectedNote)
+                .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
             
             
             if selectedNote != nil {
                 NoteView(note: selectedNote!)
             } else {
                 Text("please select a note")
+                    .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
             }
             
             

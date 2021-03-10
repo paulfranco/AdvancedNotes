@@ -14,34 +14,33 @@ struct NoteListView: View {
     @Environment(\.managedObjectContext) private var context
     @FetchRequest(fetchRequest: Note.fetch(NSPredicate.all)) private var notes: FetchedResults<Note>
     
+    
     var body: some View {
         VStack {
-            Text("Notes")
-            Button(action:{
-                _ = Note(title: "new note", context: context)
-            }, label: {
-                Text("Add")
-            })
-        
-            List(notes) { note in
-                Text("title \(note.title) with date \(note.creationDate , formatter: itemFormatter) ")
-                    .font(.title)
-                    .background(RoundedRectangle(cornerRadius: 5).fill(selectedNote == note ? Color.blue : Color(.lightGray)))
-                    .onTapGesture {
-                        selectedNote = note
-                    }
+            HStack {
+                Text("Notes")
+                Spacer()
+                Button(action:{
+                    _ = Note(title: "new note", context: context)
+                }, label: {
+                    Image(systemName: "plus")
+                    //Text("Add")
+                })
+                
+            }.padding([.top, .horizontal])
+            List {
+                ForEach(notes) { note in
+                    NoteRow(title: note.title, bodyText: note.bodyText, creationDate: note.creationDate, isSelected: note == selectedNote)
+                        .onTapGesture {
+                            selectedNote = note
+                        }
+                }
+                .listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
             }
-            
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct NoteListView_Previews: PreviewProvider {
     static var previews: some View {
@@ -55,3 +54,5 @@ struct NoteListView_Previews: PreviewProvider {
         
     }
 }
+
+
