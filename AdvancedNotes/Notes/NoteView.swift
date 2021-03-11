@@ -13,6 +13,15 @@ struct NoteView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
+            
+            Picker(selection: $note.status, label: Text("Status"), content: {
+                ForEach(Status.allCases, id: \.self) { status in
+                    Text(status.rawValue)
+                }
+            }).pickerStyle(SegmentedPickerStyle())
+            .frame(maxWidth: 250)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            
             TextField("notes title", text: $note.title)
                 //.font(.title)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
