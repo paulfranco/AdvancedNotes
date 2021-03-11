@@ -10,7 +10,8 @@ import SwiftUI
 struct NoteListView: View {
     
     @Binding var selectedNote: Note?
-    
+    //@State private var showDeleteAlert: Bool = false
+    @State private var shouldDeleteNote: Note? = nil
     @Environment(\.managedObjectContext) private var context
     @FetchRequest(fetchRequest: Note.fetch(NSPredicate.all)) private var notes: FetchedResults<Note>
     
@@ -34,10 +35,34 @@ struct NoteListView: View {
                         .onTapGesture {
                             selectedNote = note
                         }
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button(action: {
+                                self.shouldDeleteNote = note
+                            }, label: {
+                                Text("Delete")
+                            })
+                        }))
+                        
                 }
                 .listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
             }
+            /*
+            .alert(isPresented: $showDeleteAlert, content: {
+                deleteAlert()
+            })
+            */
+            .alert(item: $shouldDeleteNote, content: { noteToDelete in
+                deleteAlert(note: noteToDelete)
+            })
         }
+    }
+    func deleteAlert(note: Note) -> Alert {
+        Alert(title: Text("Are you sure you want to delete this Note?"), message: nil, primaryButton: Alert.Button.cancel(), secondaryButton: Alert.Button.destructive(Text("Delete"), action: {
+            if selectedNote == note {
+                selectedNote = nil
+            }
+            Note.delete(note: note)
+        }))
     }
 }
 
