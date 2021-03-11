@@ -38,6 +38,20 @@ extension Note {
         set { bodyText_ = newValue }
     }
     
+    var formattedText: NSAttributedString {
+        get {
+            if let data = formattedText_ as? NSData {
+                return data.toAttributedString()
+            } else {
+                return NSAttributedString(string: "")
+            }
+        }
+        set {
+            bodyText_ = newValue.string
+            formattedText_ = newValue.toNSData() as Data?
+        }
+    }
+    
     var uuid: UUID {
         get { uuid_ ?? UUID() }
         set { uuid_ = newValue }
@@ -71,5 +85,6 @@ struct NoteProperties {
     static let creationDate = "creationDate_"
     static let title = "title_"
     static let bodyText = "bodyText_"
+    static let formattedText = "formattedText_"
     static let uuid = "uuid_"
 }

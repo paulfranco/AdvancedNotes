@@ -38,6 +38,8 @@
 		03A9A0D425F8FF9A0067610F /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0D325F8FF9A0067610F /* NoteRow.swift */; };
 		03A9A0DA25F996E70067610F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0D925F996E70067610F /* Status.swift */; };
 		03A9A0DF25F996F70067610F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0D925F996E70067610F /* Status.swift */; };
+		03A9A0E525F9D51B0067610F /* NSData+text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0E425F9D51B0067610F /* NSData+text.swift */; };
+		03A9A0E625F9D51B0067610F /* NSData+text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0E425F9D51B0067610F /* NSData+text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,7 @@
 		037D008325F82F0B00E88D4C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		03A9A0D325F8FF9A0067610F /* NoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRow.swift; sourceTree = "<group>"; };
 		03A9A0D925F996E70067610F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		03A9A0E425F9D51B0067610F /* NSData+text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSData+text.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +243,7 @@
 			children = (
 				037D007325F7884300E88D4C /* Note+helper.swift */,
 				03A9A0D925F996E70067610F /* Status.swift */,
+				03A9A0E425F9D51B0067610F /* NSData+text.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -425,6 +429,7 @@
 				037D002425F77EF400E88D4C /* AppDelegate.swift in Sources */,
 				037D007925F7ECF500E88D4C /* Persistance.swift in Sources */,
 				037D008425F82F0B00E88D4C /* NoteView.swift in Sources */,
+				03A9A0E525F9D51B0067610F /* NSData+text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +461,7 @@
 				037D007E25F802A300E88D4C /* UnitTestHelpers.swift in Sources */,
 				037D006F25F7811200E88D4C /* AdvancedNotes.xcdatamodeld in Sources */,
 				037D007125F7822300E88D4C /* Persistance.swift in Sources */,
+				03A9A0E625F9D51B0067610F /* NSData+text.swift in Sources */,
 				037D006125F77FFE00E88D4C /* ContentView.swift in Sources */,
 				037D005F25F77FFE00E88D4C /* AdvancedNotesPadApp.swift in Sources */,
 				037D008525F82F0B00E88D4C /* NoteView.swift in Sources */,
