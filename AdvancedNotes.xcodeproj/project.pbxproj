@@ -42,6 +42,7 @@
 		03A9A0E625F9D51B0067610F /* NSData+text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0E425F9D51B0067610F /* NSData+text.swift */; };
 		03A9A0EC25F9DA010067610F /* TextViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0EB25F9DA010067610F /* TextViewWrapper.swift */; };
 		03A9A0ED25F9DA010067610F /* TextViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0EB25F9DA010067610F /* TextViewWrapper.swift */; };
+		03A9A0F325F9E4B30067610F /* helper+for+nsitem+conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0F225F9E4B30067610F /* helper+for+nsitem+conversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		03A9A0D925F996E70067610F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		03A9A0E425F9D51B0067610F /* NSData+text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSData+text.swift"; sourceTree = "<group>"; };
 		03A9A0EB25F9DA010067610F /* TextViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWrapper.swift; sourceTree = "<group>"; };
+		03A9A0F225F9E4B30067610F /* helper+for+nsitem+conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "helper+for+nsitem+conversion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 		037D007F25F82DDB00E88D4C /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				03A9A0F225F9E4B30067610F /* helper+for+nsitem+conversion.swift */,
 				037D008025F82DFE00E88D4C /* NoteListView.swift */,
 				037D008325F82F0B00E88D4C /* NoteView.swift */,
 				03A9A0D325F8FF9A0067610F /* NoteRow.swift */,
@@ -425,6 +428,7 @@
 				03A9A0D425F8FF9A0067610F /* NoteRow.swift in Sources */,
 				037D007725F789B300E88D4C /* NSPredicate+helper.swift in Sources */,
 				037D002925F77EF400E88D4C /* AdvancedNotes.xcdatamodeld in Sources */,
+				03A9A0F325F9E4B30067610F /* helper+for+nsitem+conversion.swift in Sources */,
 				037D008125F82DFE00E88D4C /* NoteListView.swift in Sources */,
 				03A9A0DA25F996E70067610F /* Status.swift in Sources */,
 				037D007D25F802A300E88D4C /* UnitTestHelpers.swift in Sources */,
