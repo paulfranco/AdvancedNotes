@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         let contentView = ContentView().environment(\.managedObjectContext, persistenceController.container.viewContext)
 
+        // Un-Comment to delete all notes then run the app - development only
         //UnitTestHelpers.deletesAllNotes(container: persistenceController.container)
         
         // Create the window and set the content view.

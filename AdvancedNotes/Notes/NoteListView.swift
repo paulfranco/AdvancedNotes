@@ -22,7 +22,8 @@ struct NoteListView: View {
                 Text("Notes")
                 Spacer()
                 Button(action:{
-                    _ = Note(title: "new note", context: context)
+                    let note = Note(title: "new note", context: context)
+                    selectedNote = note
                 }, label: {
                     Image(systemName: "plus")
                     //Text("Add")
