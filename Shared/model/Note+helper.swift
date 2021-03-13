@@ -40,7 +40,7 @@ extension Note {
     
     var formattedText: NSAttributedString {
         get {
-            if let data = formattedText_ as? NSData {
+            if let data = formattedText_ as NSData? {
                 return data.toAttributedString()
             } else {
                 return NSAttributedString(string: "")
@@ -77,6 +77,15 @@ extension Note {
     
     //MARK: - preview helper properties
     static let defaultText = "dksjdkjskdjskjdklsjd jdks dlkjdkl jdkl skjdcvcvc cx  cxcxcx cx cxc c cx c cx cx cxcxcxc cxcxc cx cxcxcxc skldkl djkldj ljdlksd jds dkjds jds dskldjskl"
+}
+
+//MARK: - sort notes for showing in list
+extension Note: Comparable {
+    public static func < (lhs: Note, rhs: Note) -> Bool {
+        lhs.order < rhs.order
+    }
+    
+    
 }
 
 //MARK: - property names as strings

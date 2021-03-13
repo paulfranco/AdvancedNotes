@@ -43,6 +43,9 @@
 		03A9A0EC25F9DA010067610F /* TextViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0EB25F9DA010067610F /* TextViewWrapper.swift */; };
 		03A9A0ED25F9DA010067610F /* TextViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0EB25F9DA010067610F /* TextViewWrapper.swift */; };
 		03A9A0F325F9E4B30067610F /* helper+for+nsitem+conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A0F225F9E4B30067610F /* helper+for+nsitem+conversion.swift */; };
+		03FA58B725FB0D46009BD1FF /* Folder+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA58B625FB0D46009BD1FF /* Folder+helper.swift */; };
+		03FA58B825FB0D46009BD1FF /* Folder+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA58B625FB0D46009BD1FF /* Folder+helper.swift */; };
+		03FA58BE25FB0F0D009BD1FF /* FolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA58BD25FB0F0D009BD1FF /* FolderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,8 @@
 		03A9A0E425F9D51B0067610F /* NSData+text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSData+text.swift"; sourceTree = "<group>"; };
 		03A9A0EB25F9DA010067610F /* TextViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWrapper.swift; sourceTree = "<group>"; };
 		03A9A0F225F9E4B30067610F /* helper+for+nsitem+conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "helper+for+nsitem+conversion.swift"; sourceTree = "<group>"; };
+		03FA58B625FB0D46009BD1FF /* Folder+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+helper.swift"; sourceTree = "<group>"; };
+		03FA58BD25FB0F0D009BD1FF /* FolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +190,7 @@
 		037D003B25F77EF600E88D4C /* AdvancedNotesTests */ = {
 			isa = PBXGroup;
 			children = (
+				03FA58BD25FB0F0D009BD1FF /* FolderTests.swift */,
 				037D003C25F77EF600E88D4C /* AdvancedNotesTests.swift */,
 				037D003E25F77EF600E88D4C /* Info.plist */,
 				037D007A25F7FE4400E88D4C /* NoteTests.swift */,
@@ -249,6 +255,7 @@
 				037D007325F7884300E88D4C /* Note+helper.swift */,
 				03A9A0D925F996E70067610F /* Status.swift */,
 				03A9A0E425F9D51B0067610F /* NSData+text.swift */,
+				03FA58B625FB0D46009BD1FF /* Folder+helper.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -345,7 +352,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					037D001F25F77EF400E88D4C = {
 						CreatedOnToolsVersion = 12.0;
@@ -431,6 +438,7 @@
 				03A9A0F325F9E4B30067610F /* helper+for+nsitem+conversion.swift in Sources */,
 				037D008125F82DFE00E88D4C /* NoteListView.swift in Sources */,
 				03A9A0DA25F996E70067610F /* Status.swift in Sources */,
+				03FA58B725FB0D46009BD1FF /* Folder+helper.swift in Sources */,
 				037D007D25F802A300E88D4C /* UnitTestHelpers.swift in Sources */,
 				037D007425F7884300E88D4C /* Note+helper.swift in Sources */,
 				037D002625F77EF400E88D4C /* ContentView.swift in Sources */,
@@ -447,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				037D003D25F77EF600E88D4C /* AdvancedNotesTests.swift in Sources */,
+				03FA58BE25FB0F0D009BD1FF /* FolderTests.swift in Sources */,
 				037D007B25F7FE4400E88D4C /* NoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +474,7 @@
 			files = (
 				037D007825F78A2200E88D4C /* NSPredicate+helper.swift in Sources */,
 				03A9A0DF25F996F70067610F /* Status.swift in Sources */,
+				03FA58B825FB0D46009BD1FF /* Folder+helper.swift in Sources */,
 				037D007525F7884300E88D4C /* Note+helper.swift in Sources */,
 				037D008225F82DFE00E88D4C /* NoteListView.swift in Sources */,
 				037D007E25F802A300E88D4C /* UnitTestHelpers.swift in Sources */,
@@ -556,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -611,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -626,6 +636,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AdvancedNotes/AdvancedNotes.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"AdvancedNotes/Preview Content\"";
@@ -650,6 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AdvancedNotes/AdvancedNotes.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"AdvancedNotes/Preview Content\"";
@@ -682,7 +694,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.paulfran.AdvancedNotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -704,7 +716,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.paulfran.AdvancedNotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
